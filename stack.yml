@@ -26,6 +26,7 @@ Resources:
         Statement:
           - Action:
               - "cloudformation:*"
+              - "s3:*"
             Effect: Allow
             Resource: "*"
           - Action: "cloudformation:DeleteStack"
@@ -70,6 +71,12 @@ Resources:
             Version: "2012-10-17"
             Statement:
               - Action:
+                  - "cloudformation:*"
                   - "cognito-idp:*"
+                  - "iam:*"
+                  - "lambda:*"
+                  - "secretsmanager:*"
+                  - "s3:*"
+                  - "apigateway:*"
                 Effect: Allow
                 Resource: "*"
